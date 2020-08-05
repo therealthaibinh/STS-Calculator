@@ -13,7 +13,7 @@ Content type: `application/json`
 Example curl command:
 
 ```sh
-curl -H "Content-Type: application/json" -X POST -d '{"age":70,"gender":"Male","opcab":"Yes, planned","heightcm":100,"weightkg":50}' http://riskcalc.sts.org/stswebriskcalc/v1/calculate/stsall
+curl -H "Content-Type: application/json" -X POST -d '{"age":"70","procid":"1","gender":"Male","weightkg":"50","heightcm":"100","hct":"","wbc":"","platelets":"","creatlst":"","medadpidis":"","pctstenlmain":"","hdef":"","pctstenproxlad":""}' http://riskcalc.sts.org/stswebriskcalc/v1/calculate/stsall
 ```
 
 and the response:
