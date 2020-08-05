@@ -48,21 +48,99 @@ which corresponds to the likelihoods of:
 
 | Procedure Type | `.json` |
 |---|---|
-| CAB Only | `{ opcab: "Yes, planned" }` |
-| AV Replacement | `{ opvalve: "Yes", vsav: "Yes, planned", vsavpr: "Replacement" }` |
-| MV Replacement Only | `{ opvalve: "Yes", vsmv: "Yes, planned", vsmvpr: "Replacement" }` |
-| MV Repair | `{ opvalve: "Yes", vsmv: "Yes, planned", vsmvpr: "Repair" }` |
-| AV Replacement + CAB | `{ opcab: "Yes, planned", opvalve: "Yes", vsav: "Yes, planned", vsavpr: "Replacement" }`|
-| MV Replacement + CAB | `{ opcab: "Yes, planned", opvalve: "Yes", vsmv: "Yes, planned", vsmvpr:"Replacement" }` |
-| MV Repair + CAB | `{ opcab:"Yes, planned", opvalve:"Yes", vsmv: "Yes, planned", vsmvpr: "Repair" }` |
+| Isolated CAB/CAB Only | `{ procid: "1" }` |
+| Isolated AVR/AV Replacement | `{ procid: "2" }` |
+| Isolated MVR/MV Replacement Only | `{ procid: "3" }` |
+| AVR + CAB/AV Replacement + CAB | `{ procid: "4" }` |
+| MVR + CAB/MV Replacement + CAB | `{ procid: "5" }` |
+| MV Repair | `{ procid: "7" }` |
+| MV Repair + CAB | `{ procid: "8" }` |
 
 | Patient Characteristics | `.json` |
 |---|---|
 | Age &isin; [1, 110] | `{ age: 50 }` |
 | Gender: Male | `{ gender: "Male" }` |
 | Gender: Female | `{ gender: "Female" }` |
-| Height (cm) &isin; [20, 251] | `{ heightcm: 100 }` |
 | Weight (kg) &isin; [10, 250] | `{ weightkg: 100 }` |
+| Height (cm) &isin; [20, 251] | `{ heightcm: 100 }` |
+
+| Race | `.json` |
+|---|---|
+| Race Documented: Yes | `{ racedocumented: "Yes" }` |
+| Race Documented: No | `{ racedocumented: "No" }` |
+| Race Documented: Patient declined to disclose | `{ racedocumented: "Patient declined to disclose" }` |
+| Race - Black / African American: Yes | `{ raceblack: "Yes" }` |
+| Race - Black / African American: No | `{ raceblack: "No" }` |
+| Race - Asian: Yes | `{ raceasian: "Yes" }` |
+| Race - Asian: No | `{ raceasian: "No" }` |
+| Race - American Indian / Alaskan Native: Yes | `{ racenativeam: "Yes" }` |
+| Race - American Indian / Alaskan Native: No | `{ racenativeam: "No" }` |
+| Race - Native Hawaiian / Pacific Islander: Yes | `{ racnativepacific: "Yes" }` |
+| Race - Native Hawaiian / Pacific Islander: No | `{ racnativepacific: "No" }` |
+| Hispanic or Latino or Spanish Ethnicity: Yes | `{ ethnicity: "Yes" }` |
+| Hispanic or Latino or Spanish Ethnicity: No| `{ ethnicity: "No" }` |
+| Hispanic or Latino or Spanish Ethnicity: Not Documented | `{ ethnicity: "Not Documented" }` |
+
+ 
+| Financial Class | `.json` |
+|---|---|
+| Primary Payor: None / self | `{ payorprim: "None / self" }` |
+| Primary Payor: Medicare | `{ payorprim: "Medicare" }` |
+| Primary Payor: Medicaid | `{ payorprim: "Medicaid" }` |
+| Primary Payor: Military Health | `{ payorprim: "Military Health" }` |
+| Primary Payor: Indian Health Service | `{ payorprim: "Indian Health Service" }` |
+| Primary Payor: Correctional Facility | `{ payorprim: "Correctional Facility" }` |
+| Primary Payor: State Specific Plan | `{ payorprim: "State Specific Plan" }` |
+| Primary Payor: Other Government Insurance | `{ payorprim: "Other Government Insurance" }` |
+| Primary Payor: Commerical Health Insurance | `{ payorprim: "Commerical Health Insurance" }` |
+| Primary Payor: Health Maintenance Organization | `{ payorprim: "Health Maintenance Organization" }` |
+| Primary Payor: Non-U.S. Plan | `{ payorprim: "Non-U.S. Plan" }` |
+| Primary Payor: Charitable Care/Foundation Funding | `{ payorprim: "Charitable Care/Foundation Funding" }` |
+| Secondary (Supplemental) Payor: None / self | `{ payorsecond: "None / self" }` |
+
+| Labs | `.json` |
+|---|---|
+| Hematocrit &isin; [1.00, 99.99] | `{ hct: 45 }` |
+| WBC Count &isin; [0.10, 99.99] | `{ wbc: 4.5 }` |
+| Platelet Count &isin; [1000, 900000] | `{ platelets: 150000 }` |
+| Last Creatinine Level &isin; [0.10, 30.00] | `{ creatlst: 1.0 }` |
+
+| RF | `.json` |
+|---|---|
+| RF-Renal Fail-Dialysis: Yes | `{ dialysis: "Yes" }` |
+| RF-Renal Fail-Dialysis: No | `{ dialysis: "No" }` |
+| RF-Renal Fail-Dialysis: Unknown | `{ dialysis: "Unknown" }` |
+| RF-Last Creat Level &isin; [0.1, 30] | `{ creatlst: 20 }` |
+
+| Comorbidities | `.json` |
+|---|---|
+| Dialysis | `{ dialysis: "Yes" }` |
+| Hypertension | `{ hypertn: "Yes" }` |
+| Immunocompromise Present | `{ immsupp: "Yes" }` |
+
+| Historical diagnoses | `.json` |
+|---|---|
+| Peripheral Artery Disease | `{ pvd: "Yes" }` |
+| Cerebrovascular Disease | `{ cvd: "Yes" }` |
+| Cerebrovascular Disease: CVD TIA | `{ cvdtia: "Yes" }` |
+| Cerebrovascular Disease: Prior CVA | `{ cva: "Yes" }` |
+| Cerebrovascular Disease: Prior CVA-When: <= 30 days | `{ cvawhen: "<= 30 days" }` |
+| Cerebrovascular Disease: Prior CVA-When: > 30 days | `{ cvawhen: "> 30 days" }` |
+| Cerebrovascular Disease: Severity of stenosis on the right carotid artery documented | `{ cvdstenrt: "50% to 79%" }` |
+| Cerebrovascular Disease: Severity of stenosis on the right carotid artery documented | `{ cvdstenrt: "80% to 99%" }` |
+| Cerebrovascular Disease: Severity of stenosis on the right carotid artery documented | `{ cvdstenrt: "100 %" }` |
+| Cerebrovascular Disease: Severity of stenosis on the right carotid artery documented | `{ cvdstenrt: "Not documented" }` |
+| Cerebrovascular Disease: Severity of stenosis on the left carotid artery documented | `{ cvdstenlft: "50% to 79%" }` |
+| Cerebrovascular Disease: History of previous carotid artery surgery and/or stenting | `{ cvdpcarsurg: "Yes" }` |
+
+
+| Status | `.json` |
+|---|---|
+| Elective | `{ status: "Elective" }` |
+| Urgent | `{ status: "Urgent" }` |
+| Emergent | `{ status: "Emergent" }` |
+| Emergent Salvage | `{ status: "Emergent Salvage" }` |
+
 
 | Hemo Data-EF | `.json` |
 |---|---|
@@ -76,25 +154,7 @@ which corresponds to the likelihoods of:
 | No | `{ chf: "No" }` |
 | Unknown | `{ chf: "Unknown" }` |
 
-| Race | `.json` |
-|---|---|
-| Race Documented: Yes | `{ racedocumented: "Yes" }` |
-| Race Documented: No | `{ racedocumented: "No" }` |
-| Race Documented: Patient declined to disclose | `{ racedocumented: "Patient declined to disclose" }` |
-| Race - Black / African American: Yes | `{ raceblack: "Yes" }` |
-| Race - Black / African American: No | `{ raceblack: "No" }` |
-| Hispanic or Latino or Spanish Ethnicity: Yes | `{ ethnicity: "Yes" }` |
-| Hispanic or Latino or Spanish Ethnicity: No| `{ ethnicity: "No" }` |
-| Hispanic or Latino or Spanish Ethnicity: Not Documented | `{ ethnicity: "Not Documented" }` |
-| Race - Asian: Yes | `{ raceasian: "Yes" }` |
-| Race - Asian: No | `{ raceasian: "No" }` |
 
-| RF | `.json` |
-|---|---|
-| RF-Renal Fail-Dialysis: Yes | `{ dialysis: "Yes" }` |
-| RF-Renal Fail-Dialysis: No | `{ dialysis: "No" }` |
-| RF-Renal Fail-Dialysis: Unknown | `{ dialysis: "Unknown" }` |
-| RF-Last Creat Level &isin; [0.1, 30] | `{ creatlst: 20 }` |
 
 | Cardiac Presentation/Symptoms - At Time Of This Admission | `.json` |
 |---|---|
@@ -187,12 +247,6 @@ which corresponds to the likelihoods of:
 | Percent Native Artery Stenosis Known: No | `{ pctstenknown: "No" }` |
 | Percent Stenonis - Left Main &isin; [0, 100] | `{ pctstenlmain: 50 }` |
 
-| Status | `.json` |
-|---|---|
-| Elective | `{ status: "Elective" }` |
-| Urgent | `{ status: "Urgent" }` |
-| Emergent | `{ status: "Emergent" }` |
-| Emergent Salvage | `{ status: "Emergent Salvage" }` |
 
 | Resuscitation | `.json` |
 |---|---|
