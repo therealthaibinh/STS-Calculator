@@ -48,11 +48,11 @@ which corresponds to the likelihoods of:
 
 | Procedure Type | `.json` |
 |---|---|
-| Isolated CAB/CAB Only | `{ procid: "1" }` |
-| Isolated AVR/AV Replacement | `{ procid: "2" }` |
-| Isolated MVR/MV Replacement Only | `{ procid: "3" }` |
-| AVR + CAB/AV Replacement + CAB | `{ procid: "4" }` |
-| MVR + CAB/MV Replacement + CAB | `{ procid: "5" }` |
+| Isolated CAB (CAB Only) | `{ procid: "1" }` |
+| Isolated AVR (AV Replacement) | `{ procid: "2" }` |
+| Isolated MVR (MV Replacement Only) | `{ procid: "3" }` |
+| AVR + CAB (AV Replacement + CAB) | `{ procid: "4" }` |
+| MVR + CAB (MV Replacement + CAB) | `{ procid: "5" }` |
 | MV Repair | `{ procid: "7" }` |
 | MV Repair + CAB | `{ procid: "8" }` |
 
