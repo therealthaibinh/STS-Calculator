@@ -92,7 +92,7 @@ which corresponds to the likelihoods of:
 | Primary Payor: Correctional Facility | `{ payorprim: "Correctional Facility" }` |
 | Primary Payor: State Specific Plan | `{ payorprim: "State Specific Plan" }` |
 | Primary Payor: Other Government Insurance | `{ payorprim: "Other Government Insurance" }` |
-| Primary Payor: Commerical Health Insurance | `{ payorprim: "Commerical Health Insurance" }` |
+| Primary Payor: Commercial Health Insurance | `{ payorprim: "Commercial Health Insurance" }` |
 | Primary Payor: Health Maintenance Organization | `{ payorprim: "Health Maintenance Organization" }` |
 | Primary Payor: Non-U.S. Plan | `{ payorprim: "Non-U.S. Plan" }` |
 | Primary Payor: Charitable Care/Foundation Funding | `{ payorprim: "Charitable Care/Foundation Funding" }` |
