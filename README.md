@@ -142,7 +142,7 @@ which corresponds to the likelihoods of:
 | Emergent Salvage | `{ status: "Emergent Salvage" }` |
 
 
-| Hemo Data-EF | `.json` |
+| Hemo Data-EF (ejection fraction) | `.json` |
 |---|---|
 | Hemo Data-EF Done: No | `{ hdefd: "No" }`|
 | Hemo Data-EF Done: Yes | `{ hdefd: "Yes" }`|
